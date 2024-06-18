@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb8l5u6rn571a"]
+[gd_scene load_steps=7 format=3 uid="uid://cb8l5u6rn571a"]
 
 [ext_resource type="PackedScene" uid="uid://c87ybka5gq3ud" path="res://Scenes/env/terrain.tscn" id="1_e56py"]
-[ext_resource type="PackedScene" uid="uid://dpm8bfshtjh3c" path="res://Scenes/env/background.tscn" id="1_yhm7s"]
+[ext_resource type="PackedScene" uid="uid://dpm8bfshtjh3c" path="res://Scenes/env/Backgrounds/water_background.tscn" id="1_yhm7s"]
 [ext_resource type="PackedScene" uid="uid://dskrewk0hvr5" path="res://Scenes/env/mask.tscn" id="2_g2gbg"]
 [ext_resource type="PackedScene" uid="uid://r8l3hb7hwrbl" path="res://Scenes/player/player.tscn" id="4_rvw16"]
+[ext_resource type="PackedScene" uid="uid://uso2vh214vsj" path="res://Scenes/env/hud.tscn" id="5_b4f83"]
 
 [sub_resource type="Environment" id="Environment_t3ckj"]
 background_mode = 4
@@ -28,3 +29,5 @@ position = Vector2(104, 80)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t3ckj")
+
+[node name="Hud" parent="." instance=ExtResource("5_b4f83")]

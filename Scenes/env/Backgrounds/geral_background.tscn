@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ldkqddrkv0os"]
+
+[ext_resource type="Texture2D" uid="uid://bcutamoo2l48h" path="res://Assets/tile/parallax_background/layer_1.png" id="1_y2i2l"]
+[ext_resource type="PackedScene" uid="uid://dskrewk0hvr5" path="res://Scenes/env/mask.tscn" id="2_h8iad"]
+
+[node name="GeralBackground" type="ParallaxBackground"]
+
+[node name="Layer" type="ParallaxLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="Layer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_y2i2l")
+
+[node name="Mask" parent="." instance=ExtResource("2_h8iad")]

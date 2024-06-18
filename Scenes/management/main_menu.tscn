@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba3jws2vx2vao"]
+
+[ext_resource type="Script" path="res://Scripts/management/main_menu.gd" id="1_7qioj"]
+[ext_resource type="PackedScene" uid="uid://ldkqddrkv0os" path="res://Scenes/env/Backgrounds/geral_background.tscn" id="1_rhpn7"]
+[ext_resource type="Texture2D" uid="uid://dmbmhb6wc3gov" path="res://Assets/interface/stats/background/stats_text_background.png" id="2_7yyqh"]
+[ext_resource type="Texture2D" uid="uid://cxsvn4tgaswu2" path="res://Assets/interface/stats/icon/increase_stats_icon.png" id="3_huuog"]
+[ext_resource type="FontFile" uid="uid://gvmcmmsrgjbn" path="res://Assets/font/thaleah_fat.ttf" id="4_rjsmj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7qioj")
+
+[node name="GeralBackground" parent="." instance=ExtResource("1_rhpn7")]
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="ButtonContainer" groups=["main_menu_button"]]
+custom_minimum_size = Vector2(66, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+flat = true
+
+[node name="MiddleTexture" type="TextureRect" parent="ButtonContainer/Play"]
+layout_mode = 2
+offset_right = 66.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7yyqh")
+
+[node name="LeftIcon" type="TextureRect" parent="ButtonContainer/Play"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_huuog")
+
+[node name="RightIcon" type="TextureRect" parent="ButtonContainer/Play"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 15.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_huuog")
+
+[node name="Label" type="Label" parent="ButtonContainer/Play"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.5
+offset_top = -5.5
+offset_right = 15.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("4_rjsmj")
+text = "Play"

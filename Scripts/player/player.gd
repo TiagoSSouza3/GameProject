@@ -7,7 +7,7 @@ class_name Player
 
 var direction: int = 1
 
-func _physics_process(delta: float):
+func _physics_process(_delta: float):
 	movement_env()
 	
 	move_and_slide()
