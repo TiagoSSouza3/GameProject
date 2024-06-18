@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dskrewk0hvr5"]
+
+[node name="Mask" type="CanvasModulate"]
+color = Color(0.702423, 0.702422, 0.702422, 1)

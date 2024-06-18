@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpm8bfshtjh3c"]
+
+[ext_resource type="Texture2D" uid="uid://c1oeyl0qcqxar" path="res://Assets/Terrain/water.png" id="1_hyx5s"]
+[ext_resource type="Script" path="res://Scripts/env/background.gd" id="1_om42l"]
+[ext_resource type="PackedScene" uid="uid://dskrewk0hvr5" path="res://Scenes/env/mask.tscn" id="3_ho3f2"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_om42l")
+process = true
+
+[node name="Water" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(320, 180)
+
+[node name="Texture" type="TextureRect" parent="Water"]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_hyx5s")
+stretch_mode = 1
+
+[node name="Mask" parent="." instance=ExtResource("3_ho3f2")]
